@@ -13,14 +13,13 @@ public class PlayerActions : MonoBehaviour
         anim = GetComponent<Animator>();
         //player = GetComponent<GameObject>(); 
 	} 
-   private void Update()
+    void Update()
     {
-
         if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-            anim.Play("Walk");
-        }           
+            anim.Play("Walk"); 
+        }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.Translate(-Vector3.forward * moveSpeed * Time.deltaTime);
@@ -42,7 +41,11 @@ public class PlayerActions : MonoBehaviour
         if(Input.GetKey(KeyCode.LeftShift))
         {
             anim.Play("Attack");
-            anim.SetBool("Attack", false);
         }
-    }
+        if(Input.GetKey(KeyCode.RightShift))
+        {
+            Debug.Log("key is pressed");
+            anim.Play("Run");
+        }
+    } 
 }
