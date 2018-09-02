@@ -46,8 +46,7 @@ public class PlayerActions : MonoBehaviour
         //Mark: Player run movement
         if(Input.GetKey(KeyCode.M))
         {
-            Debug.Log("Key is pressed");
-             
+            Debug.Log("Key is pressed");             
             anim.SetBool("isRuning", true);
         }
     } 
