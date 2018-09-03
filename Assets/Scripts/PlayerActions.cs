@@ -39,7 +39,7 @@ public class PlayerActions : MonoBehaviour
             anim.Play("Walk");
         }
         
-        if(Input.GetKey(KeyCode.LeftShift))
+        if(Input.GetKey(KeyCode.Space))
         {
             anim.Play("Attack");
         }
