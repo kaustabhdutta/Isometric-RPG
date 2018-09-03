@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
         instance = this;
     }
     #endregion
-   // public GameObject player;
+    public GameObject player;
     void Start ()
     {
 		
