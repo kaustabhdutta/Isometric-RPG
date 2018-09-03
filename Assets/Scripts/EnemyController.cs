@@ -6,14 +6,17 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public float lookRadius = 5.0f;
+    public float moveSpeed = 5.0f;
     Transform target;
-    NavMeshAgent agent; 
+    NavMeshAgent agent;
+    public Animator anim;
 
 	void Start ()
     {
        target = Player.instance.player.transform;
         //target = Player.instance.transform;
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
 	}
 	
     void Update ()
@@ -32,6 +35,9 @@ public class EnemyController : MonoBehaviour
 
         }
         agent.SetDestination(target.position);
+       
+       // anim.Play("Walk");
+        
     }
     void FaceTarget()
     {
