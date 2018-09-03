@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/Naveen/Desktop/T_RPG/RPG-Tutorial/Finished Project/Assets/Main.unity
+- path: Assets/Scenes/GameScene.unity
   isLoaded: 1
   isActive: 1

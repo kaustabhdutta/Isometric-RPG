@@ -23,7 +23,11 @@ public class CharController : MonoBehaviour
     {
         if (Input.anyKey)
             move();
-	}
+        if (Input.GetKey(KeyCode.Space))
+        {
+            anim.Play("Attack");
+        }
+    }
     void move()
     {
         Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"),0,Input.GetAxis("VerticalKey"));
@@ -34,11 +38,6 @@ public class CharController : MonoBehaviour
         transform.forward = heading;
         transform.position += rightMovement;
         transform.position += upMovement;
-        anim.Play("Walk");
-
-        if (Input.GetKey(KeyCode.Space))
-        {
-            anim.Play("Attack");
-        }
+        anim.Play("Walk");        
     }
 }
