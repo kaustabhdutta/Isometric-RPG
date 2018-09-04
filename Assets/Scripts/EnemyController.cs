@@ -6,15 +6,15 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     public float lookRadius = 5.0f;
-    public float moveSpeed = 5.0f;
     Transform target;
     NavMeshAgent agent;
-    public Animator anim;
+    //public GameObject player;
+
+   Animator anim;
 
 	void Start ()
     {
-       target = Player.instance.player.transform;
-        //target = Player.instance.transform;
+        target = Player.instance.player.transform; 
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
 	}
@@ -22,19 +22,28 @@ public class EnemyController : MonoBehaviour
     void Update ()
     {
         float distance = Vector3.Distance(target.position, transform.position);
-       // Debug.Log("distance:    "+ distance);
+        Debug.Log("target.position,:    " + target.position);
+        Debug.Log("transform.position:    " + transform.position);
+        Debug.Log("distance:    "+ distance);
+
+        Debug.Log("------------------------------------------------------------------------");
         if(distance <= lookRadius)
         {
             //Debug.Log("start attacking");
             agent.SetDestination(target.position);
+            anim.Play("Walk");
             if (distance <= agent.stoppingDistance)
             {
                 // Attack 
-               //FaceTarget();
+                anim.Play("Attack");
             }
 
         }
-        agent.SetDestination(target.position);
+        else
+        {
+           anim.Play("Idle");
+        }
+        //agent.SetDestination(target.position);
        
        // anim.Play("Walk");
         
