@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     public float lookRadius = 5.0f;
     Transform target;
     NavMeshAgent agent;
+    bool walk;
     //public GameObject player;
 
    Animator anim;
@@ -22,16 +23,18 @@ public class EnemyController : MonoBehaviour
     void Update ()
     {
         float distance = Vector3.Distance(target.position, transform.position);
-        Debug.Log("target.position,:    " + target.position);
-        Debug.Log("transform.position:    " + transform.position);
-        Debug.Log("distance:    "+ distance);
+        //Debug.Log("target.position,:    " + target.position);
+        //Debug.Log("transform.position:    " + transform.position);
+        //Debug.Log("distance:    "+ distance);
 
-        Debug.Log("------------------------------------------------------------------------");
+        
         if(distance <= lookRadius)
         {
-            //Debug.Log("start attacking");
+            Debug.Log("start attacking");
             agent.SetDestination(target.position);
-            anim.Play("Walk");
+              anim.Play("Walk");
+            // anim.SetBool("walk", true);
+            //anim.SetBool("idle", false); 
             if (distance <= agent.stoppingDistance)
             {
                 // Attack 
@@ -41,12 +44,13 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-           anim.Play("Idle");
+            //  debug.log("not attacking");
+            // anim.setbool("walk", false);
+            //anim.setbool("idle", true);
+            anim.Play("Idle");
         }
-        //agent.SetDestination(target.position);
-       
-       // anim.Play("Walk");
-        
+
+
     }
     void FaceTarget()
     {
