@@ -9,23 +9,35 @@ public class CharController : MonoBehaviour
 
     Vector3 forward, right;
     Animator anim;
-	void Start ()
+
+    [SerializeField]
+    private Stat health;
+
+    bool attacking = false;
+
+    void Awake()
+    {
+        health.Initialize();
+    }
+    
+    void Start ()
     {
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = Vector3.Normalize(forward);
         right = Quaternion.Euler(new Vector3(0,90,0)) * forward;
-        anim = GetComponent<Animator>();
-	}
+        anim = GetComponent<Animator>(); 
+    }
 	
-	// Update is called once per frame
 	void Update ()
     {
         if (Input.anyKey)
-            move();
+             move(); 
         if (Input.GetKey(KeyCode.Space))
         {
-            anim.Play("Attack");
+            if(!attacking)
+                Attack();
+            health.CurrentVal -= 10;
         }
     }
     void move()
@@ -38,6 +50,32 @@ public class CharController : MonoBehaviour
         transform.forward = heading;
         transform.position += rightMovement;
         transform.position += upMovement;
-        anim.Play("Walk");        
+        // anim.Play("Walk");
+        Walk();
+    }
+    
+    void Idle()
+    {
+        anim.SetInteger("Condition",0);
+    }
+    void Attack()
+    {
+        anim.SetInteger("Condition",1);
+        StartCoroutine(AttackRoutine());
+    }
+    void Walk()
+    {
+        Debug.Log("walk animation");
+        anim.SetInteger("Condition", 2);
+    }
+    void Death()
+    {
+        anim.SetInteger("Condition",3);
+    }
+    IEnumerator AttackRoutine()
+    {
+        attacking = true;
+        yield return new WaitForSeconds(0.5f);
+        attacking = false;
     }
 }

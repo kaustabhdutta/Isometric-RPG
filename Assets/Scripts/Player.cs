@@ -2,24 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour {
     #region singelton
     public static Player instance;
-    
+
     void Awake()
     {
         instance = this;
     }
     #endregion
     public GameObject player;
-    void Start ()
-    {
+    // Use this for initialization
+    void Start () {
 		
 	}
-
-    void Update ()
-    {
-	    	
+	
+	// Update is called once per frame
+	void Update () {
+		
 	}
 }
