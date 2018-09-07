@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1904
     height: 981
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1904
     height: 931
-  m_MinSize: {x: 581, y: 471}
+  m_MinSize: {x: 583, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 79
+  controlID: 51
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 1513
     height: 931
-  m_MinSize: {x: 304, y: 471}
+  m_MinSize: {x: 306, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 80
+  controlID: 52
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,10 +154,10 @@ MonoBehaviour:
     y: 0
     width: 1513
     height: 523
-  m_MinSize: {x: 304, y: 200}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 306, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 34
+  controlID: 53
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,8 +176,8 @@ MonoBehaviour:
     y: 0
     width: 283
     height: 523
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -369,28 +369,28 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: b62cfaffc649faff8068faffd0f1ffffa0f4ffff78f6ffff0000000098460000d2460000
+    m_SelectedIDs: 00c4ffff
+    m_LastClickedID: -15360
+    m_ExpandedIDs: 14caffff46f9ffff48f9ffff00000000d82f000012300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: ZolrikMercenaryMain
-      m_OriginalName: ZolrikMercenaryMain
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 17076
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
-  - SampleScene
+  - NewScene
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -426,9 +426,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -9.346065, y: -3.5909796, z: -8.860468}
+    m_Target: {x: 0.027521849, y: -0.753459, z: 2.7702103}
     speed: 2
-    m_Value: {x: -9.346065, y: -3.5909796, z: -8.860468}
+    m_Value: {x: 0.027521849, y: -0.753459, z: 2.7702103}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -456,13 +456,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.010910915, y: -0.93997633, z: 0.3397265, w: 0.03019025}
+    m_Target: {x: -0.2098946, y: 0.05539272, z: -0.011912055, w: -0.97608095}
     speed: 2
-    m_Value: {x: 0.010910915, y: -0.93997633, z: 0.3397265, w: 0.03019025}
+    m_Value: {x: -0.2098946, y: 0.05539272, z: -0.011912055, w: -0.97608095}
   m_Size:
-    m_Target: 28.316174
+    m_Target: 19.507189
     speed: 2
-    m_Value: 28.316174
+    m_Value: 19.507189
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -595,20 +595,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/FantasyMonstersZolrik/Scene/Script
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 63
   m_LastFolders:
-  - Assets/FantasyMonstersZolrik/Scene/Script
+  - Assets/Scripts
   m_LastFoldersGridSize: 63
-  m_LastProjectPath: Z:\IGMProfile\Desktop\Prototypes\Isometric RPG\Isometric RPG
+  m_LastProjectPath: Z:\IGMProfile\Documents\GitHub\Isometric-RPG
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 08330000
-    m_LastClickedID: 13064
-    m_ExpandedIDs: 000000001a2c0000003300000633000000ca9a3b
+    m_SelectedIDs: f6310000
+    m_LastClickedID: 12790
+    m_ExpandedIDs: 00000000342c00000e2d0000fc2d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -636,7 +636,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001a2c0000
+    m_ExpandedIDs: 00000000342c00000e2d0000fc2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
